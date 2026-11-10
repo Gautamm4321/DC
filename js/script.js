@@ -85,6 +85,7 @@
       thumbsBox.querySelectorAll('.gm-thumb').forEach(function(t){ t.addEventListener('click',function(){ show(+t.getAttribute('data-i')); }); });
       show(0); modal.classList.add('on'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
     function close(){ modal.classList.remove('on'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+    window.kkOpenGallery = open; // used by the Journey story viewer (js/journey.js)
     document.querySelectorAll('.mstone.has-gallery').forEach(function(m){
       var key=m.getAttribute('data-gallery');
       m.addEventListener('click', function(){ open(key); });
@@ -150,7 +151,7 @@
     lbi.src=fig.querySelector('img').src; lbi.alt=fig.querySelector('img').alt;
     lbc.textContent=fig.getAttribute('data-cap')||''; lb.classList.add('on');
   });
-  function closeLb(){ lb.classList.remove('on'); lbi.src=''; }
+  function closeLb(){ if(!lb) return; lb.classList.remove('on'); lbi.src=''; }
   var lbx=document.getElementById('lbx'); lbx && lbx.addEventListener('click', closeLb);
   lb && lb.addEventListener('click', function(e){ if(e.target===lb) closeLb(); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLb(); });
@@ -159,8 +160,9 @@
   var hbg=document.querySelector('.hero-bg');
   function heroParallax(){
     if(reduce||!hbg) return;
-    var y=window.pageYOffset;
-    if(y<window.innerHeight) hbg.style.transform='translateY('+(y*0.25)+'px) scale(1.05)';
+    // measured from the hero's own top, since the Chowk scene now sits above it
+    var y=-hbg.parentNode.getBoundingClientRect().top;
+    if(y>-window.innerHeight && y<window.innerHeight) hbg.style.transform='translateY('+(Math.max(0,y)*0.25)+'px) scale(1.05)';
   }
 
   window.addEventListener('scroll', onScroll, {passive:true});
