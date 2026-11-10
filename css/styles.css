@@ -598,3 +598,104 @@ section{position:relative}
   *{animation:none!important;transition:none!important}
   .anim .reveal{opacity:1!important;transform:none!important}
 }
+
+
+/* ======================= 6-STONE CHAPTERS (inserted) ======================= */
+/* ======================= THE JOURNEY (street) ======================= */
+.journey-street{position:relative;overflow:hidden;margin-top:-1px;padding:clamp(28px,4vw,52px) 0 clamp(54px,7vw,96px);
+  background:linear-gradient(180deg,#140d07 0%, #1a1109 32%, #1e1409 62%, #120b06 100%)}
+.js-sky{display:none}
+/* continuous dark gallery wall behind the photos */
+.js-wall{position:absolute;left:0;right:0;top:4%;height:50%;z-index:0;
+  background:linear-gradient(180deg,#241a10,#1a120a 70%, transparent);
+  box-shadow:inset 0 -40px 60px -30px #000}
+.js-ground{position:absolute;left:0;right:0;bottom:0;height:38%;z-index:1;
+  background:
+    repeating-linear-gradient(90deg, rgba(0,0,0,.14) 0 2px, transparent 2px 46px),
+    linear-gradient(180deg, rgba(74,48,22,.7), rgba(26,16,7,.95));
+  box-shadow:inset 0 40px 80px -40px rgba(0,0,0,.85)}
+.js-path{position:absolute;left:4%;right:4%;bottom:20%;height:3px;z-index:2;
+  background:linear-gradient(90deg,transparent,rgba(255,190,90,.6) 10%,rgba(255,190,90,.6) 90%,transparent);
+  filter:blur(1px);box-shadow:0 0 34px 8px rgba(255,170,70,.35)}
+
+/* street lamps */
+.lamp{position:absolute;bottom:26%;width:4px;height:120px;z-index:2;
+  background:linear-gradient(#5a4327,#2a1d10)}
+.lamp::before{content:"";position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+  width:16px;height:20px;border-radius:50% 50% 42% 42%;
+  background:radial-gradient(circle at 50% 35%,#fff0c4,#f0ad3c);
+  box-shadow:0 0 26px 10px rgba(255,190,90,.55);animation:lampflk 3.6s ease-in-out infinite}
+.lamp::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:16px;height:4px;background:#2a1d10;border-radius:2px}
+.lamp-a{left:30%}.lamp-b{left:48%}.lamp-c{left:66%}.lamp-d{left:84%;bottom:28%}
+@keyframes lampflk{0%,100%{opacity:.9}50%{opacity:1}}
+
+/* bench on the right */
+.bench{position:absolute;right:3%;bottom:14%;width:120px;height:46px;z-index:2;opacity:.55}
+.bench::before{content:"";position:absolute;bottom:0;left:0;right:0;height:8px;background:#3a2714;border-radius:3px;
+  box-shadow:0 10px 0 -2px #2a1d10, -4px 0 0 #2a1d10, 100px 10px 0 -2px #2a1d10}
+.bench::after{content:"";position:absolute;bottom:14px;left:4px;width:112px;height:22px;
+  background:repeating-linear-gradient(90deg,#3a2714 0 14px, transparent 14px 20px);border-radius:3px}
+
+.js-inner{position:relative;z-index:4;display:flex;align-items:flex-end;gap:clamp(1rem,2vw,2rem)}
+.js-intro{flex:0 0 auto;align-self:center;padding-bottom:2.4rem}
+.js-intro h2{font-family:var(--f-disp);font-size:clamp(1.6rem,3.2vw,2.6rem);color:#f3e2b4;line-height:1.02;letter-spacing:.06em}
+.js-intro h2 span{color:var(--gold-hi)}
+.js-intro .js-sub{font-family:var(--f-serif);font-style:italic;font-size:1.5rem;color:var(--gold-2);margin-top:1rem}
+.js-intro .js-note{font-family:var(--f-serif);font-style:italic;font-size:1.1rem;color:var(--cream-dim)}
+
+.milestones{flex:1 1 0;min-width:0;display:flex;align-items:flex-end;justify-content:space-between;gap:clamp(.4rem,.9vw,1rem)}
+.mstone{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;position:relative;
+  transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.mstone:hover{transform:translateY(-10px)}
+
+/* arched photo on the wall */
+.mphoto{width:98%;max-width:160px;padding:7px;border-radius:90px 90px 5px 5px;margin-bottom:-30px;
+  background:linear-gradient(145deg,#d8bd82,#7c5a22);
+  box-shadow:0 26px 50px -22px rgba(0,0,0,.9),0 0 34px -12px rgba(255,180,90,.45)}
+.mphoto img{display:block;width:100%;height:clamp(170px,21vh,230px);object-fit:cover;
+  border-radius:84px 84px 3px 3px;border:1px solid #140e07;filter:sepia(.3) grayscale(.4) contrast(1.06) brightness(.95)}
+.mstone:hover .mphoto{box-shadow:0 34px 60px -20px rgba(0,0,0,.95),0 0 40px -8px rgba(255,190,90,.6)}
+
+/* tombstone / stone marker */
+.stone{position:relative;z-index:3;width:100%;max-width:166px;
+  background:linear-gradient(170deg,#e9d6ab 0%, #d0b683 44%, #ab9060 100%);
+  border-radius:50% 50% 10px 10px / 36% 36% 6px 6px;padding:1.2rem .9rem;text-align:center;
+  box-shadow:0 30px 50px -24px rgba(0,0,0,.9), 0 -2px 0 rgba(255,245,220,.55) inset, 0 0 42px -10px rgba(255,180,90,.5);
+  display:flex;flex-direction:column;align-items:center;gap:.14rem}
+.stone::after{content:"";position:absolute;left:50%;bottom:-16px;transform:translateX(-50%);
+  width:130%;height:40px;background:radial-gradient(50% 100% at 50% 0,rgba(255,180,80,.55),transparent 70%);filter:blur(3px);z-index:-1}
+.stone .snum{font-family:var(--f-disp);font-size:clamp(1.4rem,2.2vw,1.9rem);color:#4a3517;line-height:1}
+.stone .sdeva{font-family:var(--f-deva);font-size:clamp(.9rem,1.4vw,1.1rem);color:#5a4119;margin-top:.2rem}
+.stone .sen{font-family:var(--f-disp);font-size:clamp(.6rem,.92vw,.76rem);letter-spacing:.06em;color:#6b4f23;text-transform:uppercase;line-height:1.25}
+
+/* potted bougainvillea at each stone base */
+.plant{position:absolute;bottom:-6px;left:-6px;width:34px;height:40px;z-index:4}
+.plant::before{content:"";position:absolute;bottom:0;left:4px;width:26px;height:16px;
+  background:linear-gradient(#8a5a2c,#5c3a18);border-radius:3px 3px 5px 5px;clip-path:polygon(10% 0,90% 0,78% 100%,22% 100%)}
+.plant::after{content:"";position:absolute;bottom:12px;left:0;width:34px;height:28px;border-radius:50%;
+  background:
+    radial-gradient(6px 6px at 20% 30%, #c0447e, transparent 60%),
+    radial-gradient(5px 5px at 60% 20%, #d4679a, transparent 60%),
+    radial-gradient(5px 5px at 80% 45%, #b83a74, transparent 60%),
+    radial-gradient(7px 7px at 40% 55%, #2f5a2a, transparent 60%),
+    radial-gradient(7px 7px at 70% 70%, #294e24, transparent 60%),
+    radial-gradient(8px 8px at 30% 75%, #335f2d, transparent 60%)}
+
+@media(max-width:900px){
+  .js-inner{flex-direction:column;align-items:stretch;gap:2rem}
+  .js-intro{align-self:flex-start;padding-bottom:0}
+  .milestones{overflow-x:auto;justify-content:flex-start;scrollbar-width:none;padding-bottom:.5rem}
+  .milestones::-webkit-scrollbar{display:none}
+  .mstone{flex:0 0 auto;width:150px}
+  .lamp,.bench{display:none}
+}
+
+/* clickable milestone + gallery modal */
+.mstone.has-gallery{cursor:pointer}
+.view-badge{position:absolute;top:-6px;right:14%;z-index:6;width:30px;height:30px;border-radius:50%;
+  display:grid;place-items:center;color:#0d0a06;background:linear-gradient(120deg,var(--gold-2),var(--gold-hi));
+  box-shadow:0 6px 18px -6px rgba(0,0,0,.8),0 0 20px -4px rgba(201,162,75,.7);
+  opacity:0;transform:scale(.6);transition:.4s}
+.view-badge svg{width:15px;height:15px}
+.mstone.has-gallery:hover .view-badge,.mstone.has-gallery:focus-visible .view-badge{opacity:1;transform:scale(1)}
+.mstone.has-gallery:focus-visible{outline:2px solid var(--gold-2);outline-offset:4px;border-radius:8px}
