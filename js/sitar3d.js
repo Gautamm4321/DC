@@ -553,17 +553,17 @@ async function init() {
     { el: '.hero', at: () => mobile() ? [0.5, 0.5] : [0.27, 0.5],
       len: r => mobile() ? Math.min(r.width * 0.95, r.height * 0.62) : Math.min(r.width * 0.42, r.height * 0.7),
       ang: 37, from: 9, to: 0.1, anchor: true, hop: 0 },   // peel off the stand from the first scroll and glide straight here
+    // the six-stone chapters frame: the sitar glides in and floats above the stones
+    { el: '#chapters', at: () => mobile() ? [0.5, 0.15] : [0.5, 0.24],
+      len: r => mobile() ? Math.min(r.width * 0.78, r.height * 0.42) : Math.min(r.width * 0.3, r.height * 0.56),
+      ang: 24, from: 0.96, to: 0.34 },
     // the story street: land at its top-middle, standing upright (vertical) ...
     { el: '.jr-street', at: r => mobile() ? [LANE_PX / r.width, 0.03] : [0.5, 0.1],
       len: streetLen, ang: 90, from: 0.95, to: 0.3 },
-    // ... then walk down the middle of the street, holding mid-screen, to its bottom-middle
+    // ... then walk down the middle of the street, holding mid-screen, to its bottom-middle,
+    // and scroll away with the street — no sitar over the final About section.
     { el: '.jr-street', at: r => mobile() ? [LANE_PX / r.width, 0.97] : [0.5, 0.9],
-      len: streetLen, ang: 90, follow: 0.5, turn: false },
-    // finally settle exactly onto the sitar in his photograph (About section) and dissolve into it.
-    // Fitted on the frets: the model's lowest fret (43.6 cm) lands on the photo's lowest visible fret
-    // at (62.3%, 77.9%) and its top fret (99.2 cm) on the photo's top fret at (93.2%, 26.6%).
-    { el: '.about-photo img', at: [0.675, 0.627], len: r => r.width * 1.58, ang: 62.8, from: 1.05, to: 0.22,
-      turn: false, merge: true }
+      len: streetLen, ang: 90, follow: 0.5, turn: false }
   ];
   const ease = t => t * t * (3 - 2 * t);
   const clamp01 = v => Math.max(0, Math.min(1, v));
