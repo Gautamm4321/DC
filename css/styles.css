@@ -713,13 +713,17 @@ section{position:relative}
    ===================================================================== */
 #galModal{
   background:
-    radial-gradient(52% 44% at 50% -4%, rgba(255,172,82,.18), transparent 70%),
-    radial-gradient(42% 32% at 5% 12%, rgba(197,106,70,.15), transparent 72%),
-    radial-gradient(42% 32% at 96% 22%, rgba(197,106,70,.13), transparent 72%),
-    radial-gradient(40% 26% at 50% 104%, rgba(255,160,70,.10), transparent 72%),
-    radial-gradient(125% 95% at 50% 38%, #1d140b, #0e0906 60%, #070504 100%);
+    radial-gradient(56% 46% at 50% -6%, rgba(255,176,86,.24), transparent 66%),
+    radial-gradient(44% 34% at 4% 12%, rgba(197,106,70,.20), transparent 70%),
+    radial-gradient(44% 34% at 97% 20%, rgba(197,106,70,.18), transparent 70%),
+    radial-gradient(42% 28% at 50% 106%, rgba(255,162,72,.14), transparent 70%),
+    linear-gradient(180deg, rgba(12,8,4,.52) 0%, rgba(9,6,4,.78) 46%, rgba(6,4,3,.92) 100%),
+    url('../assets/bg-gallery.png') center 16% / cover no-repeat,
+    #0a0704;
   backdrop-filter:blur(7px) saturate(1.12);
 }
+/* soft chowk-arch haze layer above the photo, below content */
+#galModal .gm-page{backdrop-filter:blur(3px) saturate(1.05)}
 /* drifting gold dust — behind the panel */
 #galModal::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.7;
   background-image:
@@ -746,8 +750,8 @@ section{position:relative}
 
 /* the hall panel — warmer, lamplit, rises on open */
 #galModal .gm-page{position:relative;z-index:1;
-  background:linear-gradient(160deg,rgba(40,27,14,.66),rgba(14,9,5,.6));
-  border:1px solid rgba(242,196,109,.3);
+  background:linear-gradient(160deg,rgba(38,25,13,.74),rgba(12,8,4,.7));
+  border:1px solid rgba(242,196,109,.34);
   box-shadow:0 44px 120px -34px #000, inset 0 1px 0 rgba(255,228,165,.16),
     inset 0 0 0 1px rgba(242,196,109,.08), 0 0 90px -34px rgba(255,170,80,.45);
   animation:gmRise .6s cubic-bezier(.2,.75,.2,1) both}
