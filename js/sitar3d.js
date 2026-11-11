@@ -552,10 +552,10 @@ async function init() {
     // centred inside the golden arch over the monument in the new chowk artwork
     { el: '.chowk-stage', at: () => portrait() ? [0.52, 0.3] : [0.5, 0.2],
       len: r => r.width * (portrait() ? 0.4 : 0.3), ang: () => portrait() ? 33 : 27 },
-    // desktop: stands straight (vertical) at the far right near the bench; mobile: rests at the bottom
-    { el: '.hero', at: () => mobile() ? [0.45, 0.84] : [0.91, 0.5],
-      len: r => mobile() ? Math.min(r.width * 0.8, r.height * 0.4) : Math.min(r.width * 0.3, r.height * 0.66),
-      ang: () => mobile() ? 37 : 90, from: 9, to: 0.1, anchor: true, hop: 0 },   // peel off the monument on the first scroll and glide straight here
+    // desktop: stands straight (vertical) at the far right near the bench; mobile: rests low on the walkway, clear of the arches
+    { el: '.hero', at: () => mobile() ? [0.5, 0.9] : [0.91, 0.5],
+      len: r => mobile() ? Math.min(r.width * 0.72, r.height * 0.28) : Math.min(r.width * 0.3, r.height * 0.66),
+      ang: () => mobile() ? 20 : 90, from: 9, to: 0.1, anchor: true, hop: 0 },   // peel off the monument on the first scroll and glide straight here
     // (frame 3 / #chapters is intentionally skipped — the sitar flies 1 -> 2 -> straight to the street)
     // the story street: land at its top-middle, standing upright (vertical) ...
     { el: '.jr-street', at: r => mobile() ? [LANE_PX / r.width, 0.03] : [0.5, 0.1],
