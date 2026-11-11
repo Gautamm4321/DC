@@ -130,6 +130,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hero{position:relative;height:100vh;min-height:600px;display:flex;flex-direction:column;
   align-items:center;justify-content:center;text-align:center;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0;background:#050505}
+.hero-bg picture{position:absolute;inset:0;display:block;width:100%;height:100%}
 .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:1}
 .hero-bg::after{content:"";position:absolute;inset:0;
   background:linear-gradient(90deg, rgba(5,5,6,.55) 0%, rgba(5,5,6,.28) 26%, transparent 48%),
