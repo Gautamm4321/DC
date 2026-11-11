@@ -90,7 +90,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 /* the artwork is shown whole on desktop; the 3D sitar (js/sitar3d.js) is pinned to points on this stage */
 .chowk{position:relative;background:#120d14;overflow:hidden}
 .chowk-stage{position:relative;width:100%;aspect-ratio:1672/941;margin:0 auto}
-.chowk-art{position:absolute;inset:0;width:100%;height:100%;display:block}
+.chowk-art{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center}
 /* still photo of his sitar resting on the monument, for browsers without 3D */
 .chowk-still{position:absolute;left:41%;top:3%;width:25%;height:auto;pointer-events:none;transform:rotate(16deg);transform-origin:15% 78%;
   filter:brightness(.95) drop-shadow(0 0 1px rgba(255,214,150,.6)) drop-shadow(0 16px 18px rgba(0,0,0,.55))}
@@ -117,8 +117,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 }
 /* phones: the portrait Chowk fills the whole vertical screen */
 @media(max-width:600px){
-  .chowk{padding-top:0;min-height:0;display:block}
-  .chowk-stage{width:100%;max-width:none;height:auto;aspect-ratio:941/1672;margin:0 auto;transform:none}
+  .chowk{padding-top:0;min-height:100svh;display:block}
+  .chowk-stage{width:100%;max-width:none;height:100svh;aspect-ratio:auto;margin:0;transform:none}
   .chowk-still{left:38%;top:19%;width:40%;transform:rotate(14deg)}
   .chowk-stand.wide{display:none}
   .chowk-stand.tall{display:block}
