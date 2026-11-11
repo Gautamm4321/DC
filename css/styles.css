@@ -127,14 +127,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 }
 
 /* ======================= HERO (cinematic, 3D) ======================= */
-.hero{position:relative;height:100vh;min-height:600px;display:flex;flex-direction:column;
+.hero{position:relative;width:100%;aspect-ratio:1920/1080;height:auto;min-height:0;display:flex;flex-direction:column;
   align-items:center;justify-content:center;text-align:center;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0;background:#050505}
 .hero-bg picture{position:absolute;inset:0;display:block;width:100%;height:100%}
 .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:1}
 .hero-bg::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg, rgba(5,5,6,.55) 0%, rgba(5,5,6,.28) 26%, transparent 48%),
-             linear-gradient(180deg, rgba(5,5,6,.4) 0%, transparent 16%, transparent 82%, #140d07 100%)}
+  background:linear-gradient(90deg, rgba(5,5,6,.42) 0%, rgba(5,5,6,.18) 24%, transparent 46%),
+             linear-gradient(180deg, rgba(5,5,6,.34) 0%, transparent 14%, transparent 92%, rgba(20,13,7,.75) 100%)}
 .hero-sitar-wrap{position:absolute;left:21%;top:50%;transform:translate(-50%,-50%);z-index:2;
   height:min(70vh,630px);pointer-events:none;perspective:1400px}
 .hero-sitar-float{height:100%;transform-style:preserve-3d;animation:floatY 7s ease-in-out infinite}
@@ -146,6 +146,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   50%{transform:translateY(-24px) rotateZ(1.5deg) rotateY(6deg)}
   100%{transform:translateY(0) rotateZ(-1.5deg) rotateY(-6deg)}}
 @media(max-width:860px){.hero-sitar-wrap{left:50%;height:46vh}}
+/* phones: show the full portrait journey wall, uncropped (placed after the base .hero so it wins) */
+@media(max-width:600px){.hero{aspect-ratio:1080/1920}}
 /* still image (no-GPU fallback): his sitar photographed on the diagonal, so size it by width too */
 .hero-sitar-wrap:not(.is-3d){height:min(52vh,470px);left:25%}
 .hero-sitar-wrap:not(.is-3d)::after{content:"";position:absolute;left:4%;right:30%;bottom:-6%;height:12%;
