@@ -548,16 +548,13 @@ async function init() {
     // phones (portrait artwork): gourd on the rim left of centre, neck rising to ~34 degrees
     // mounted on the gold arch stand: gourd centre at the artwork's (44%, 32.5%) wide / (40.5%, 40%) portrait,
     // body just over the rim (its lowest edge tucks behind it), neck rising at 27 / 33 degrees
-    // mounted on the gold ring of the new chowk artwork (sitar centre where the painted one sat)
-    { el: '.chowk-stage', at: () => portrait() ? [0.56, 0.33] : [0.558, 0.15],
-      len: r => r.width * (portrait() ? 0.45 : 0.28), ang: () => portrait() ? 35 : 27 },
+    // rests on top of the monument dome in the new chowk artwork
+    { el: '.chowk-stage', at: () => portrait() ? [0.47, 0.3] : [0.48, 0.15],
+      len: r => r.width * (portrait() ? 0.42 : 0.3), ang: () => portrait() ? 33 : 27 },
     { el: '.hero', at: () => mobile() ? [0.5, 0.5] : [0.27, 0.5],
       len: r => mobile() ? Math.min(r.width * 0.95, r.height * 0.62) : Math.min(r.width * 0.42, r.height * 0.7),
-      ang: 37, from: 9, to: 0.1, anchor: true, hop: 0 },   // peel off the stand from the first scroll and glide straight here
-    // the six-stone chapters frame: the sitar glides in and floats above the stones
-    { el: '#chapters', at: () => mobile() ? [0.5, 0.15] : [0.5, 0.24],
-      len: r => mobile() ? Math.min(r.width * 0.78, r.height * 0.42) : Math.min(r.width * 0.3, r.height * 0.56),
-      ang: 24, from: 0.96, to: 0.34 },
+      ang: 37, from: 9, to: 0.1, anchor: true, hop: 0 },   // peel off the monument on the first scroll and glide straight here
+    // (frame 3 / #chapters is intentionally skipped — the sitar flies 1 -> 2 -> straight to the street)
     // the story street: land at its top-middle, standing upright (vertical) ...
     { el: '.jr-street', at: r => mobile() ? [LANE_PX / r.width, 0.03] : [0.5, 0.1],
       len: streetLen, ang: 90, from: 0.95, to: 0.3 },

@@ -92,7 +92,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .chowk-stage{position:relative;width:100%;aspect-ratio:1672/941;margin:0 auto}
 .chowk-art{position:absolute;inset:0;width:100%;height:100%;display:block}
 /* still photo of his sitar resting on the monument, for browsers without 3D */
-.chowk-still{position:absolute;left:43%;top:1%;width:27%;height:auto;pointer-events:none;transform:rotate(16deg);transform-origin:15% 78%;
+.chowk-still{position:absolute;left:37%;top:-4%;width:27%;height:auto;pointer-events:none;transform:rotate(18deg);transform-origin:15% 78%;
   filter:brightness(.95) drop-shadow(0 0 1px rgba(255,214,150,.6)) drop-shadow(0 16px 18px rgba(0,0,0,.55))}
 .kk-3d .chowk-still{display:none}
 /* gold arch stand hidden: the new chowk artwork has its own gold ring the sitar mounts on */
@@ -119,7 +119,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media(max-width:600px){
   .chowk{padding-top:0;min-height:100svh;display:flex;align-items:center}
   .chowk-stage{width:auto;max-width:none;height:100svh;aspect-ratio:941/1672;margin:0 auto;transform:none}
-  .chowk-still{left:33%;top:21%;width:41%;transform:rotate(8deg)}
+  .chowk-still{left:29%;top:20%;width:42%;transform:rotate(10deg)}
   .chowk-stand.wide{display:none}
   .chowk-stand.tall{display:block}
   .chowk-stand.tall .arches path{stroke-width:8}
