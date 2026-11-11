@@ -92,7 +92,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .chowk-stage{position:relative;width:100%;aspect-ratio:1672/941;margin:0 auto}
 .chowk-art{position:absolute;inset:0;width:100%;height:100%;display:block}
 /* still photo of his sitar resting on the monument, for browsers without 3D */
-.chowk-still{position:absolute;left:37%;top:-4%;width:27%;height:auto;pointer-events:none;transform:rotate(18deg);transform-origin:15% 78%;
+.chowk-still{position:absolute;left:41%;top:3%;width:25%;height:auto;pointer-events:none;transform:rotate(16deg);transform-origin:15% 78%;
   filter:brightness(.95) drop-shadow(0 0 1px rgba(255,214,150,.6)) drop-shadow(0 16px 18px rgba(0,0,0,.55))}
 .kk-3d .chowk-still{display:none}
 /* gold arch stand hidden: the new chowk artwork has its own gold ring the sitar mounts on */
@@ -135,8 +135,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hero-bg::after{content:"";position:absolute;inset:0;
   background:linear-gradient(90deg, rgba(5,5,6,.42) 0%, rgba(5,5,6,.18) 24%, transparent 46%),
              linear-gradient(180deg, rgba(5,5,6,.34) 0%, transparent 14%, transparent 92%, rgba(20,13,7,.75) 100%)}
-.hero-sitar-wrap{position:absolute;left:21%;top:50%;transform:translate(-50%,-50%);z-index:2;
-  height:min(70vh,630px);pointer-events:none;perspective:1400px}
+.hero-sitar-wrap{position:absolute;left:78%;top:55%;transform:translate(-50%,-50%);z-index:2;
+  height:min(60vh,560px);pointer-events:none;perspective:1400px}
 .hero-sitar-float{height:100%;transform-style:preserve-3d;animation:floatY 7s ease-in-out infinite}
 .hero-sitar{height:100%;width:auto;display:block;user-select:none;transform-style:preserve-3d;
   filter:drop-shadow(0 30px 44px rgba(0,0,0,.6));
@@ -149,7 +149,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 /* phones: show the full portrait journey wall, uncropped (placed after the base .hero so it wins) */
 @media(max-width:600px){.hero{aspect-ratio:1080/1920}}
 /* still image (no-GPU fallback): his sitar photographed on the diagonal, so size it by width too */
-.hero-sitar-wrap:not(.is-3d){height:min(52vh,470px);left:25%}
+.hero-sitar-wrap:not(.is-3d){height:min(52vh,470px);left:76%}
 .hero-sitar-wrap:not(.is-3d)::after{content:"";position:absolute;left:4%;right:30%;bottom:-6%;height:12%;
   border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.55),transparent);filter:blur(6px);z-index:-1}
 .hero-sitar-wrap:not(.is-3d) .hero-sitar-float{animation:floatStill 8s ease-in-out infinite}

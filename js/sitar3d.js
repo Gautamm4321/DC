@@ -549,10 +549,12 @@ async function init() {
     // mounted on the gold arch stand: gourd centre at the artwork's (44%, 32.5%) wide / (40.5%, 40%) portrait,
     // body just over the rim (its lowest edge tucks behind it), neck rising at 27 / 33 degrees
     // rests on top of the monument dome in the new chowk artwork
-    { el: '.chowk-stage', at: () => portrait() ? [0.47, 0.3] : [0.48, 0.15],
+    // sits inside the golden arch over the monument in the new chowk artwork
+    { el: '.chowk-stage', at: () => portrait() ? [0.47, 0.3] : [0.5, 0.2],
       len: r => r.width * (portrait() ? 0.42 : 0.3), ang: () => portrait() ? 33 : 27 },
-    { el: '.hero', at: () => mobile() ? [0.5, 0.5] : [0.27, 0.5],
-      len: r => mobile() ? Math.min(r.width * 0.95, r.height * 0.62) : Math.min(r.width * 0.42, r.height * 0.7),
+    // on desktop it glides to the RIGHT, near the bench, so it never hides the gallery wall
+    { el: '.hero', at: () => mobile() ? [0.5, 0.5] : [0.8, 0.55],
+      len: r => mobile() ? Math.min(r.width * 0.95, r.height * 0.62) : Math.min(r.width * 0.36, r.height * 0.62),
       ang: 37, from: 9, to: 0.1, anchor: true, hop: 0 },   // peel off the monument on the first scroll and glide straight here
     // (frame 3 / #chapters is intentionally skipped — the sitar flies 1 -> 2 -> straight to the street)
     // the story street: land at its top-middle, standing upright (vertical) ...
