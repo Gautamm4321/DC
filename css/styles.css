@@ -441,15 +441,19 @@ section{position:relative}
 .about-photo .cap{position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);white-space:nowrap;
   background:#0a0a0b;border:1px solid var(--line);padding:.4rem 1.1rem;border-radius:30px;
   font-family:var(--f-ui);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-2)}
-.about-body .eyebrow{display:block;margin-bottom:1.1rem}
-.about-body h2{font-family:var(--f-disp);font-size:clamp(1.9rem,4.4vw,3rem);color:#fff;margin-bottom:.4rem}
+.about-body .eyebrow{display:block;margin-bottom:.7rem}
+.about-body h2{font-family:var(--f-disp);font-size:clamp(1.8rem,4vw,2.7rem);color:#fff;margin-bottom:.3rem;line-height:1.05}
 .about-body h2 .em{font-family:var(--f-script);color:var(--gold-hi);font-size:1.3em;display:inline-block;margin-left:.15em}
-.about-lead{font-family:var(--f-serif);font-style:italic;font-size:1.3rem;color:var(--gold-2);margin:1rem 0 1.3rem;line-height:1.4}
-.about-body p+p{margin-top:.9rem;color:var(--fg-2)}
-.sign{margin-top:1.8rem;width:min(260px,70%);color:var(--gold-hi);opacity:.9}
-.about-stats{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:1.8rem;border-top:1px solid var(--line);padding-top:1.4rem}
-.about-stats div b{font-family:var(--f-disp);font-size:1.7rem;color:var(--gold-hi);display:block}
+.about-lead{font-family:var(--f-serif);font-style:italic;font-size:1.2rem;color:var(--gold-2);margin:.6rem 0 .8rem;line-height:1.3}
+.about-body p{line-height:1.5}
+.about-body p+p{margin-top:.7rem;color:var(--fg-2)}
+.sign{margin-top:1.1rem;width:min(260px,70%);color:var(--gold-hi);opacity:.9}
+.about-stats{display:flex;flex-wrap:wrap;gap:1rem 1.6rem;margin-top:1.1rem;border-top:1px solid var(--line);padding-top:1rem}
+.about-stats div b{font-family:var(--f-disp);font-size:1.6rem;color:var(--gold-hi);display:block;line-height:1.15}
 .about-stats div span{font-family:var(--f-ui);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.about-more{text-align:center;margin-top:clamp(1.8rem,3.5vw,3rem);font-family:var(--f-serif);font-style:italic;
+  font-size:clamp(1.05rem,1.7vw,1.35rem);color:var(--gold-2);letter-spacing:.04em;opacity:.92}
+.about-more::before,.about-more::after{content:"·";color:var(--gold);margin:0 .6em;opacity:.8}
 
 /* ======================= JOURNEY / TIMELINE ======================= */
 #journey{background:radial-gradient(130% 60% at 50% 0%, #0c0a07, #050505 62%)}
