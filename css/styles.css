@@ -318,7 +318,7 @@ section{position:relative}
   .jr-road,.jr-lit,.jr-lamp{display:none}
 
   .jr-grid{position:absolute;inset:0;display:block}
-  .jr-head{position:absolute;right:3.4cqw;left:auto;top:3.4cqw;width:15.8cqw;max-width:none;z-index:4;
+  .jr-head{position:absolute;left:3.4cqw;right:auto;top:3.4cqw;width:15.8cqw;max-width:none;z-index:4;
     padding:1.5cqw 1.6cqw 1.7cqw;border-radius:.9cqw}
   .jr-head .eyebrow{font-size:.68cqw}
   .jr-head h2{font-size:4.3cqw;margin:.3cqw 0 .6cqw}
