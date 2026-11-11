@@ -548,8 +548,9 @@ async function init() {
     // phones (portrait artwork): gourd on the rim left of centre, neck rising to ~34 degrees
     // mounted on the gold arch stand: gourd centre at the artwork's (44%, 32.5%) wide / (40.5%, 40%) portrait,
     // body just over the rim (its lowest edge tucks behind it), neck rising at 27 / 33 degrees
-    { el: '.chowk-stage', at: () => portrait() ? [0.535, 0.356] : [0.545, 0.25],
-      len: r => r.width * (portrait() ? 0.42 : 0.32), ang: () => portrait() ? 33 : 27 },
+    // mounted on the gold ring of the new chowk artwork (sitar centre where the painted one sat)
+    { el: '.chowk-stage', at: () => portrait() ? [0.56, 0.33] : [0.558, 0.15],
+      len: r => r.width * (portrait() ? 0.45 : 0.28), ang: () => portrait() ? 35 : 27 },
     { el: '.hero', at: () => mobile() ? [0.5, 0.5] : [0.27, 0.5],
       len: r => mobile() ? Math.min(r.width * 0.95, r.height * 0.62) : Math.min(r.width * 0.42, r.height * 0.7),
       ang: 37, from: 9, to: 0.1, anchor: true, hop: 0 },   // peel off the stand from the first scroll and glide straight here
