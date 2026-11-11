@@ -540,7 +540,7 @@ async function init() {
   // phones: a slim sitar walking down the lit road lane at the left edge, clear of the story cards
   const LANE_PX = 38;
   const streetLen = r => mobile() ? Math.min(150, window.innerHeight * 0.22)
-                                  : Math.min(r.width * 0.34, window.innerHeight * 0.66);
+                                  : Math.min(r.width * 0.28, window.innerHeight * 0.5);
   const portrait = () => window.matchMedia('(max-width: 600px)').matches;
   const STOPS = [
     // phones crop the image to its middle, so the sitar sits a little smaller and further left there
