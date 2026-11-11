@@ -451,9 +451,9 @@ section{position:relative}
 .about-stats{display:flex;flex-wrap:wrap;gap:1rem 1.6rem;margin-top:1.1rem;border-top:1px solid var(--line);padding-top:1rem}
 .about-stats div b{font-family:var(--f-disp);font-size:1.6rem;color:var(--gold-hi);display:block;line-height:1.15}
 .about-stats div span{font-family:var(--f-ui);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-.about-more{text-align:center;margin-top:clamp(1.8rem,3.5vw,3rem);font-family:var(--f-serif);font-style:italic;
-  font-size:clamp(1.05rem,1.7vw,1.35rem);color:var(--gold-2);letter-spacing:.04em;opacity:.92}
-.about-more::before,.about-more::after{content:"·";color:var(--gold);margin:0 .6em;opacity:.8}
+.about-more{text-align:center;margin-top:clamp(.5rem,1vw,1rem);font-family:var(--f-serif);font-style:italic;
+  font-size:clamp(1.8rem,4vw,2.7rem);color:var(--gold-2);letter-spacing:.02em;opacity:.95;line-height:1.2}
+.about-more::before,.about-more::after{content:"·";color:var(--gold);margin:0 .5em;opacity:.8}
 
 /* ======================= JOURNEY / TIMELINE ======================= */
 #journey{background:radial-gradient(130% 60% at 50% 0%, #0c0a07, #050505 62%)}
